@@ -62,9 +62,9 @@
         this.data.push(
           {
             name: name,
-            country: agify.age,
-            CProbability: nationalize.country[0].country_id,
-            age: Math.round(nationalize.country[0].probability * 100) + "%",
+            age: agify.age,
+            country: nationalize.country[0].country_id,
+            CProbability: Math.round(nationalize.country[0].probability * 100) + "%",
             gender: genderize.gender,
             GProbability: Math.round(genderize.probability * 100) + "%"
           }
