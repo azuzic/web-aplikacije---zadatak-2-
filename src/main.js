@@ -10,9 +10,3 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
-
-Vue.use(Vuetify)
-
-export default new Vuetify({
-  theme: { dark: true },
-})
