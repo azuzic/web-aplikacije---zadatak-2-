@@ -1,32 +1,29 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+  <v-app>
+    <v-app-bar app>
+      <b class="mr-2">Alesandro Žužić </b> - <u class="ml-2"> Web Aplikacije - Zadatak [2]</u>
+
+      <v-spacer></v-spacer>
+
+      <v-switch
+        v-model="$vuetify.theme.dark"
+        hide-details
+        label="Tamna tema"
+      ></v-switch>
+    </v-app-bar>
+    
     <router-view/>
-  </div>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-nav {
-  padding: 30px;
+export default {
+  name: 'App',
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  async created() {
+    this.$vuetify.theme.dark = true;
   }
-}
-</style>
+};
+</script>
+
